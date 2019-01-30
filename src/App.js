@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.scss'
 
 import TodoList from "./components/TodoList"
@@ -6,11 +6,21 @@ import TodoInput from "./components/TodoInput"
 
 const App = () => {
 
-  const todosData = []
+  const store = (namespace, data) => {
+    if (data){
+      return localStorage.setItem (namespace, JSON.stringify(data))
+    } else {
+      let store = localStorage.getItem(namespace)
+      return (store && JSON.parse(store)) || [];
+    }
+  }
+
+
+  const todosData = store("todosLocal")
 
   const [todos, setTodos] = useState(todosData)
 
-  const addTodo = todo => {
+  const addTodo = async todo => {
     if (!todo.name) return;
     todo.id = todos.length + 1
     setTodos([...todos, todo])
@@ -35,12 +45,15 @@ const App = () => {
   }
 
   const updateTodo = (todoEdit) => {
-    console.log(todoEdit);
     setTodos(todos.map(todo =>
       (todo.id === todoEdit.id) ?
       todoEdit : todo
     ))
   }
+
+  useEffect(() => {
+    store("todosLocal", todos)
+  })
 
 
   return (
