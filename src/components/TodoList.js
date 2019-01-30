@@ -23,12 +23,13 @@ const TodoList = props => {
           onClick={() => toggleTodo(todo.id)}
           style={{
             textDecoration: todo.completed ? 'line-through':'none',
+            opacity: todo.completed ? '0.5' : '1',
             cursor:"pointer"
           }}>
           {todo.name}
           </span>
-          <button onClick={() => editTodo(todo.id)}>Edit</button>
-          <button onClick={() => deleteTodo(todo.id)}>X</button>
+          <button className="edit" onClick={() => editTodo(todo.id)}>Edit</button>
+          <button className="delete" onClick={() => deleteTodo(todo.id)}>X</button>
         </li>
       )
     }
@@ -50,12 +51,3 @@ const TodoList = props => {
 }
 
 export default TodoList
-
-// <form onSubmit={handleSubmit}>
-//   <input
-//   type="text"
-//   name="name"
-//   value={edit.name}
-//   onChange={handleInputChange} />
-//   <button>Done!</button>
-// </form>

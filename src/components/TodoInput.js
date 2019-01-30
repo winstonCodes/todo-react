@@ -27,6 +27,7 @@ const TodoInput = props => {
           type="text"
           name="name"
           value={todo.name}
+          autocomplete="off"
           onChange={handleInputChange} />
         <button>add</button>
       </form>

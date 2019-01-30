@@ -3,6 +3,7 @@ import './App.scss'
 
 import TodoList from "./components/TodoList"
 import TodoInput from "./components/TodoInput"
+import Footer from "./components/Footer"
 
 const App = () => {
 
@@ -59,8 +60,11 @@ const App = () => {
   return (
     <div className="container">
       <header><h1>Remind Me!</h1></header>
-      <TodoInput addTodo={addTodo} />
-      <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} editTodo={editTodo} updateTodo={updateTodo}/>
+      <div className="content">
+        <TodoInput addTodo={addTodo} />
+        <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} editTodo={editTodo} updateTodo={updateTodo}/>
+      </div>
+      <Footer />
     </div>
   );
 }
