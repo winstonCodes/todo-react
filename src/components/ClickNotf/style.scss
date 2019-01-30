@@ -1,0 +1,23 @@
+p {
+  margin: 0;
+}
+#notf {
+  animation-name: notificattion;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes notificattion {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.8;
+    }
+
+    100% {
+      opacity: 0;
+      display: none;
+    }
+}
