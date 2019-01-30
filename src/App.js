@@ -61,8 +61,8 @@ const App = () => {
   return (
     <div className="container">
       <header><h1>Remind Me!</h1></header>
-      <ClickNotf />
       <div className="content">
+        <ClickNotf />
         <TodoInput addTodo={addTodo} />
         <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} editTodo={editTodo} updateTodo={updateTodo}/>
       </div>
