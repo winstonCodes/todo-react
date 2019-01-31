@@ -3,7 +3,7 @@ import TodoEdit from './TodoEdit'
 
 const TodoList = props => {
 
-  const {todos, deleteTodo, toggleTodo, editTodo, updateTodo} = props;
+  const {todos, deleteTodo, toggleTodo, editTodo, updateTodo, clearCompleted, clearAll} = props;
 
   const handleUpdate = todo => updateTodo(todo)
 
@@ -40,6 +40,16 @@ const TodoList = props => {
       {(todos.length > 0 ? (
         <ul>
           {todosArray}
+          <button
+            className="clear"
+            onClick={clearCompleted}>
+            Clear Completed
+          </button>|
+          <button
+            className="clear"
+            onClick={clearAll}>
+            Clear All
+          </button>
         </ul>
       ) : (
         <p> No todos!</p>

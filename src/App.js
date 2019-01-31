@@ -53,6 +53,14 @@ const App = () => {
     ))
   }
 
+  const clearCompleted = () => {
+    setTodos(todos.filter(todo => !todo.completed))
+  }
+
+  const clearAll = () => {
+    setTodos([])
+  }
+
   useEffect(() => {
     store("todosLocal", todos)
   })
@@ -64,7 +72,10 @@ const App = () => {
       <div className="content">
         <ClickNotf />
         <TodoInput addTodo={addTodo} />
-        <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} editTodo={editTodo} updateTodo={updateTodo}/>
+        <TodoList
+          todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} editTodo={editTodo} updateTodo={updateTodo}
+          clearCompleted={clearCompleted}
+          clearAll={clearAll}/>
       </div>
       <Footer />
     </div>
