@@ -129,8 +129,9 @@ button {
     ul{
       display: flex;
       padding: 0;
-      justify-content: space-around;
+      justify-content: space-between;
       width: 20%;
+      min-width: 150px;
       a {
         color: #F9F4F4;
         opacity: 0.8;

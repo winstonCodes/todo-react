@@ -72,7 +72,3 @@ const App = () => {
 }
 
 export default App;
-
-// { id: 1, name: "get eggs", completed: false, edit: false },
-// { id: 2, name: "drink water", completed: false, edit: false },
-// { id: 3, name: "go run", completed: false, edit: false },
