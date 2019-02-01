@@ -22,7 +22,7 @@ const App = () => {
 
   const [todos, setTodos] = useState(todosData)
 
-  const addTodo = async todo => {
+  const addTodo = todo => {
     if (!todo.name) return;
     todo.id = todos.length + 1
     setTodos([...todos, todo])
