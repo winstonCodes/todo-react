@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 const TodoEdit = props => {
   const {updateTodo, todo} = props;
 
-    const initialInputState = { id: todo.id, name:todo.name, completed: false }
+    const initialInputState = { id: todo.id, name:todo.name, completed: todo.completed }
 
     const [newTodo, setTodo] = useState(initialInputState);
 
