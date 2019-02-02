@@ -3,11 +3,12 @@ import TodoEdit from './TodoEdit'
 
 const TodoList = props => {
 
-  const {todos, deleteTodo, toggleTodo, editTodo, updateTodo, clearCompleted, clearAll} = props;
+  const {todos, deleteTodo, toggleComplete, toggleEdit, updateTodo, clearCompleted, clearAll} = props;
 
+  // function used to pass edited todo data from child EditInput up to parent and into state
   const handleUpdate = todo => updateTodo(todo)
 
-
+  // todos array = if edit toggle is true, render edit component. else render todo li and inline styles
   let todosArray = todos.map(todo => {
     if (todo.edit) {
       return (
@@ -20,7 +21,7 @@ const TodoList = props => {
       return (
         <li key={todo.id}>
           <span
-          onClick={() => toggleTodo(todo.id)}
+          onClick={() => toggleComplete(todo.id)}
           style={{
             textDecoration: todo.completed ? 'line-through':'none',
             opacity: todo.completed ? '0.5' : '1',
@@ -28,13 +29,14 @@ const TodoList = props => {
           }}>
           {todo.name}
           </span>
-          <button className="edit" onClick={() => editTodo(todo.id)}>Edit</button>
+          <button className="edit" onClick={() => toggleEdit(todo.id)}>Edit</button>
           <button className="delete" onClick={() => deleteTodo(todo.id)}>X</button>
         </li>
       )
     }
 })
 
+  //render todolist array and clear buttons if length>0, else no todos message
   return (
     <div className="todo-list">
       {(todos.length > 0 ? (

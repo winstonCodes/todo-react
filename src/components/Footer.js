@@ -1,5 +1,6 @@
 import React from 'react'
 
+// social media icons from FontAwesome
 const Footer = () => (
   <footer className="footer">
     <ul>

@@ -1,8 +1,8 @@
 import React from "react";
 import './style.scss';
 
+// "click to mark todo as complete" animation
 const ClickNotf = props => {
-;
   const style = {
     backgroundColor: "inherit",
     color: "inherit",
