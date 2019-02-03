@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Lora:400');
 
-$color-header: #cac9b8;
-$color-body: #cac9b8;
-$color-footer: #cac9b8;
+$color-header: #cacaca;
+$color-body: #cacaca;
+$color-footer: #cacaca;
 $color-font-header: #dd6c54;
-$color-font-body: #271D2E;
+$color-font-body: #425060;
 $color-font-footer: #dd6c54;
-$color-edit: green;
-$color-delete: red;
-// $color-add: #;
-$color-done: blue;
+$color-edit: #425060;
+$color-delete: #dd6c54;
+$color-clear: #425060;
+$color-add: #425060;
+$color-done: #4d87a0;
 $font-header: Lora, sans-serif;
 $font-body: "Open Sans", sans-serif;
 $font-size-header: 4em;
@@ -22,7 +23,7 @@ $font-size-body: 1em;
   margin: 0;
 }
 body {
-  background-color: #30404F;
+  background-color: #425060;
   font-family: $font-body;
   font-size: $font-size-body;
 }
@@ -42,6 +43,13 @@ button {
 .done {
   color: $color-done;
 }
+.clear{
+  color: $color-clear;
+}
+.add {
+  color: $color-add;
+}
+
 
 .container {
   display: flex;
