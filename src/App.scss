@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Lora:400');
 
-$color-header: #D25A37;
-$color-body: #9F9FAE;
-$color-footer: #271D2E;
-$color-font-header: #F9F4F4;
+$color-header: #cac9b8;
+$color-body: #cac9b8;
+$color-footer: #cac9b8;
+$color-font-header: #dd6c54;
 $color-font-body: #271D2E;
-$color-font-footer: #F9F4F4;
+$color-font-footer: #dd6c54;
 $color-edit: green;
 $color-delete: red;
 // $color-add: #;
@@ -22,7 +22,7 @@ $font-size-body: 1em;
   margin: 0;
 }
 body {
-  background-color: #F9F4F4;
+  background-color: #30404F;
   font-family: $font-body;
   font-size: $font-size-body;
 }
@@ -121,6 +121,7 @@ button {
   .todo-list {
     width: 50%;
     margin: 0 auto;
+    max-width: 500px;
     li {
       list-style: none;
       text-align: left;
