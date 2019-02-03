@@ -1,4 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,600|Work+Sans:400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Lora:400');
+
+$color-header: #D25A37;
+$color-body: #9F9FAE;
+$color-footer: #271D2E;
+$color-font-header: #F9F4F4;
+$color-font-body: #271D2E;
+$color-font-footer: #F9F4F4;
+$color-edit: green;
+$color-delete: red;
+// $color-add: #;
+$color-done: blue;
+$font-header: Lora, sans-serif;
+$font-body: "Open Sans", sans-serif;
+$font-size-header: 4em;
+$font-size-body: 1em;
 
 *{
   list-style: none;
@@ -8,7 +23,8 @@
 }
 body {
   background-color: #F9F4F4;
-  font-family: Roboto, sans-serif;
+  font-family: $font-body;
+  font-size: $font-size-body;
 }
 
 button {
@@ -18,13 +34,13 @@ button {
   margin: 0 5px;
 }
 .edit {
-  color: green;
+  color: $color-edit;
 }
 .delete {
-  color: red;
+  color: $color-delete;
 }
 .done {
-  color: blue;
+  color: $color-done;
 }
 
 .container {
@@ -37,18 +53,19 @@ button {
   max-width: 1200px;
   margin: auto;
   text-align: center;
-  background-color: #9F9FAE;
-  color: #271D2E;
+  background-color: $color-body;
+  color: $color-font-body;
   header {
     width: 100%;
-    background-color: #D25A37;
+    background-color: $color-header;
     height: 25vh;
     h1{
       position:relative;
       top: 35%;
-      color: #F9F4F4;
-      font-family: "Work Sans", sans-serif;
-      font-size: 3em;
+      color: $color-font-header;
+      font-family: $font-header;
+      font-size: $font-size-header;
+      letter-spacing: 2px;
     }
   }
   .content {
@@ -72,9 +89,8 @@ button {
     input {
       background-color: inherit;
       border: none;
-      border-bottom: 1px #271D2E solid;
+      border-bottom: 1px $color-font-body solid;
       margin-right: 5px;
-      // width: 30%;
       font: inherit;
     }
   }
@@ -90,7 +106,7 @@ button {
     }
     form {
       display: flex;
-      border-bottom: 1px #271D2E solid;
+      border-bottom: 1px $color-font-body solid;
       width: 100%;
     }
     input {
@@ -129,7 +145,7 @@ button {
     bottom: 0;
     width: 100%;
     margin-right: auto;
-    background-color: #271D2E;
+    background-color: $color-footer;
     height: 15vh;
     ul{
       display: flex;
@@ -138,7 +154,7 @@ button {
       width: 20%;
       min-width: 150px;
       a {
-        color: #F9F4F4;
+        color: $color-font-footer;
         opacity: 0.8;
       }
       a:hover {
