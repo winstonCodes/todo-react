@@ -28,7 +28,7 @@ const App = () => {
   // create new todo, passed to TodoInput component
   const addTodo = todo => {
     if (!todo.name) return;
-    todo.id = todos.length + 1
+    todo.id = Date.now()
     setTodos([...todos, todo])
   }
 
